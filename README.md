@@ -6,4 +6,5 @@ ____
   + clone this repository
   + build | modify repository
   + push your project into GitHub
-  `stringify`
+  `stringify()`
+  
