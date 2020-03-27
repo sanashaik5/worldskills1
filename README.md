@@ -1,6 +1,6 @@
 ## worldskills sample project 
 ____
-<img src="image1.svg" alt="icon"/>
+<img src="image1.svg" width="20%" height="20%" alt="icon"/>
 + Github concepts
   + creating an account
   + creating a repository
