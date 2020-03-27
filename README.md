@@ -6,4 +6,4 @@ ____
   + clone this repository
   + build | modify repository
   + push your project into GitHub
-My Website
+  `stringify`
