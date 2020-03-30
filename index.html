@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header"> Sample Web site </header>
+
+</body>
+<script>
+// Body
+// console.log(document.body);
+var obj=new Object();
+obj.name="Ravi";
+obj.email="ravi@gmail.com";
+obj.mobile="+91 9878685838";
+obj.image="user.svg";
+
+var root=document.getElementsByTagName("body")[0];
+
+// Parent element
+var parent=document.createElement("section");
+parent.classList.add("parent");
+
+// Child
+var child=document.createElement("article");
+child.classList.add("child");
+
+
+// image
+var profilePic=document.createElement("img");
+profilePic.src="images/"+obj.image;
+profilePic.alt="Profile pic";
+child.append(profilePic);
+
+
+// Heading with name
+var heading=document.createElement("h2");
+heading.textContent=obj.name;
+child.append(heading);
+
+// Email
+var email=document.createElement("a");
+email.href="mailto:"+obj.email;
+email.textContent=obj.email;
+email.style.backgroundColor="#ddd";
+email.style.boxShadow="0px 8px 8px -8px #000";
+child.append(email);
+
+// Mobile number
+var mobile=document.createElement("a");
+mobile.href="tel:"+obj.mobile;
+mobile.textContent=obj.mobile;
+child.append(mobile);
+
+parent.append(child);
+root.append(parent);
+
+
+fetch("data.json").then(response=>{
+    return response.json();
+}).then(data=>{
+    console.log(data.basics.name);
+})
+</script>
+</html>
