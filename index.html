@@ -16,9 +16,10 @@
 // Body
 // console.log(document.body);
 var obj=new Object();
-obj.name="Ravi";
-obj.email="ravi@gmail.com";
+obj.name="Sana";
+obj.email="sanasahiba2016@gmail.com";
 obj.mobile="+91 9878685838";
+obj.position="HR of XYZ Company";
 obj.image="user.svg";
 
 var root=document.getElementsByTagName("body")[0];
@@ -42,26 +43,36 @@ child.append(profilePic);
 // Heading with name
 var heading=document.createElement("h2");
 heading.textContent=obj.name;
+heading.style.marginBottom="3%";
 child.append(heading);
 
 // Email
 var email=document.createElement("a");
 email.href="mailto:"+obj.email;
 email.textContent=obj.email;
+email.style.fontSize="20px";
 email.style.backgroundColor="#ddd";
 email.style.boxShadow="0px 8px 8px -8px #000";
+email.style.marginBottom="3%";
 child.append(email);
 
 // Mobile number
 var mobile=document.createElement("a");
 mobile.href="tel:"+obj.mobile;
 mobile.textContent=obj.mobile;
+
+mobile.style.fontSize="20px";
+mobile.style.marginBottom="1%";
 child.append(mobile);
 
 parent.append(child);
 root.append(parent);
 
-
+var position=document.createElement("h4");
+position.textContent=obj.position;
+child.append(position);
+parent.append(child);
+root.append(parent);
 fetch("data.json").then(response=>{
     return response.json();
 }).then(data=>{
